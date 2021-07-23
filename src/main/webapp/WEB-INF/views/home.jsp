@@ -83,14 +83,14 @@ a {
 					<h3>로그인</h3>
 					<div class="form-group">
 						<label for="exampleInputEmail1">ID</label> <input type="text"
-							class="form-control" id="id" name="id" placeholder="아이디를 입력하세요"
+							class="form-control" id="id" name="id" placeholder="아이디를 입력해 주세요."
 							aria-describedby="emailHelp"> <small id="emailHelp"
 							class="form-text text-muted">저희는 아이디를 다른 사람과 공유하지 않습니다.</small>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label> <input
 							type="password" class="form-control" id="pw" name="pw"
-							placeholder="비밀번호를 입력하세요">
+							placeholder="비밀번호를 입력해 주세요.">
 					</div>
 
 					<button type="submit" class="btn btn-secondary"
