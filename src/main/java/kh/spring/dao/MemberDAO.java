@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+
 import kh.spring.dto.MemberDTO;
 
 @Repository
@@ -28,4 +29,9 @@ public class MemberDAO {
 	
 	}
 
+	
+	public int memberOut(String id) {
+		String sql="delete from member where id = ?";
+		return jdbc.update(sql,id);
+	}
 }
