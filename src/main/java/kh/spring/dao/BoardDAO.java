@@ -12,11 +12,12 @@ public class BoardDAO {
 	@Autowired
 	private JdbcTemplate jdbc;
 	
+	// 수정
 	public int modify(BoardDTO dto) {
-		String sql = "update board set title=?, set contents=? where board_seq=?";
+		String sql = "update board set title=?, contents=? where board_seq=?";
 		return jdbc.update(sql, dto.getTitle(), dto.getContents(), dto.getBoard_seq());
 	}
-	
+	// 삭제
 	public int delete(int board_seq) {
 		String sql = "delete from board where board_seq = ?";
 		return jdbc.update(sql, board_seq);

@@ -28,7 +28,7 @@
 </style>
 </head>
 <body>
-
+<a href="modifyForm">d</a>
 	<c:choose>
 		<c:when test="${loginID==null }">
 

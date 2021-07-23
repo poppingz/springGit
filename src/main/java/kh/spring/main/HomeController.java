@@ -1,28 +1,37 @@
 package kh.spring.main;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
+import kh.spring.dao.BoardDAO;
+import kh.spring.dto.BoardDTO;
 
 
 @Controller
 public class HomeController {
+	
+	@Autowired
+	private BoardDAO dao;
 	
 	@RequestMapping("/")
 	public String home() {
 		return "home";
 	}
 	
-	@RequestMapping("/modify")
-	public String modify() {
-		return null;
+	//수정화면 이동
+	@RequestMapping("modifyForm")
+	public String modifyForm() {
+		System.out.println("수정 화면 전환");
+		return "writeModify";
+	}
+	
+	//수정
+	@RequestMapping("modifyProc")
+	public String modify(BoardDTO dto) throws Exception {
+		System.out.println("수정 요청 확인");
+		int result = dao.modify(dto);
+		return "home";
 	}
 	
 }
