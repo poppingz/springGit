@@ -34,6 +34,10 @@
 			$("#listFrm").submit;
 		})
 		
+		$("#delete").on("click",function(){
+			
+		})
+		
 		$("#back").on("click",function(){
 		
 		})
