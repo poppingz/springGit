@@ -41,6 +41,7 @@
 .title {
 	margin: 30px 0px 60px 0px;
 }
+
 .menu {
 	width: 800px;
 	height: 150px;
@@ -48,6 +49,7 @@
 	display: flex;
 	margin: auto;
 }
+
 .menu>div {
 	height: 70px;
 	width: 200px;
@@ -55,9 +57,11 @@
 	margin: auto;
 	line-height: 60px;
 }
+
 .menu>div:hover {
 	background-color: #ddd;
 }
+
 a {
 	text-decoration: none;
 	color: black;
