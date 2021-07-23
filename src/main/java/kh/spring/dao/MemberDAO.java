@@ -11,7 +11,7 @@ public class MemberDAO {
 	private JdbcTemplate jdbc;
 	
 	public int memberOut(String id) {
-		String sql="delete from person where id = ?";
+		String sql="delete from member where id = ?";
 		return jdbc.update(sql,id);
 	}
 }
