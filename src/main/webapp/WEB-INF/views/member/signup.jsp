@@ -65,11 +65,6 @@
 					</div>
                     
 
-
-
-
-
-				
 					<button type="submit" class="btn btn-secondary">가입하기</button>
                     <button type="button" class="btn btn-secondary" id="goHome">홈으로</button>
 				</form>
