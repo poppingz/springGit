@@ -7,8 +7,15 @@
 <meta charset="UTF-8">
 <title>Home</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+	$(function(){
+		$("#toBoardWrite").on("click",function(){
+			location.href="/board/boardWrite";
+		})
+	})
+</script>
 </head>
 <body>
-	깃 연습입니다.
+	<button type="button" id="toBoardWrite">이동</button>
 </body>
 </html>
