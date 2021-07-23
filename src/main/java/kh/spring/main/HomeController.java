@@ -15,9 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	@RequestMapping( "/")
+	@RequestMapping("/")
 	public String home() {
 		return "home";
+	}
+	
+	@RequestMapping("/modify")
+	public String modify() {
+		return null;
 	}
 	
 }
