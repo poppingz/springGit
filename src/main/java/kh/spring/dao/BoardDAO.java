@@ -2,6 +2,7 @@ package kh.spring.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -71,6 +72,27 @@ public class BoardDAO {
          return target;
       }
 
+      
+      
+    // Board List 화면에 뿌리기 ---------------------------------------
+      public List<BoardDTO> List() throws Exception{
+         String sql ="select * from board";
+         
+         return jdbc.query(sql, new RowMapper<BoardDTO>() {
+            @Override
+            public BoardDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+               
+               BoardDTO dto = new BoardDTO();
+               dto.setBoard_seq(rs.getInt("board_seq"));
+               dto.setId(rs.getString("id"));
+               dto.setTitle(rs.getString("title"));
+               dto.setView_count(rs.getInt("view_count"));
+               dto.setWrite_date(rs.getDate("write_date"));
+               return dto;
+            }
+         });
+
+      }
 
 
 

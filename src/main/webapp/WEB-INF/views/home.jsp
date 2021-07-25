@@ -118,7 +118,7 @@ a {
 				<div class="title">${loginID }님</div>
 				<div class="menu">
 					<div>
-						<a href="#">게시판</a>
+						<a href="/board/list">게시판</a>
 					</div>
 					<div>
 						<a href="/member/logout">로그아웃</a>
@@ -127,7 +127,7 @@ a {
 						<a href="/member/memberOut" id="memberOut">회원탈퇴</a>
 					</div>
 				</div>
-
+ 
 			</div>
 		</c:otherwise>
 
