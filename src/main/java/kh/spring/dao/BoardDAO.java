@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import kh.spring.dto.BoardDTO;
+import kh.spring.vo.PagingVO;
 
 
 @Repository
@@ -17,7 +18,7 @@ public class BoardDAO {
 
    @Autowired
    private JdbcTemplate jdbc;
-
+   private BoardDAO dao;
 
 
    // 새로 작성한 글에 대한 seq ----------------------------------------------------
@@ -94,6 +95,39 @@ public class BoardDAO {
 
       }
 
-
+      //------------------ Paging --------------------------------------
+      
+      // 총 게시글 개수
+      public int CountBoard() {
+    	  String sql ="select count(*) from board";
+    	  return jdbc.queryForObject(sql, Integer.class);
+      }
+      
+      
+     //페이징 처리 후 게시글 조회
+      public List<BoardDTO> SelectBoard(PagingVO vo){
+    	 String sql= "select * from"
+    	 		+ "(select"
+    	 		+ "    row_number() over(order by board_seq desc) rnum,"
+    	 		+ "    board_seq, title, id, write_date, view_count"
+    	 		+ "    from board)"
+    	 		+ "    where rnum between ? and ?"; //임의값 넣어 놨음 
+    	 
+ 		return jdbc.query(sql, new RowMapper<BoardDTO>() { //여기 처리 어떻게 해야 될지 모르겠음... ㅠ
+			@Override
+			public BoardDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+				
+				BoardDTO dto = new BoardDTO();
+				dto.setBoard_seq(rs.getInt("board_seq"));
+	            dto.setId(rs.getString("id"));
+	            dto.setTitle(rs.getString("title"));
+	            dto.setView_count(rs.getInt("view_count"));
+	            dto.setWrite_date(rs.getDate("write_date"));
+				return dto;
+			}
+		},vo.getStart(), vo.getEnd());
+      }
+      
+      
 
 }
