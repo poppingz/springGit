@@ -33,13 +33,13 @@
 		<form action="/board/writeProc" method="post" enctype="multipart/form-data" id="frm">
 			<div class="row">
 				<div class="card-header bg-transparent border-secondary text-secondary col-12">
-					<h4 class="card-title" id="title">글 쓰기</h4>
+					<h4 class="card-title" id="title2">글 쓰기</h4>
 				</div>
 				<div class="col-12">
-					<input type=text class="form-control mb-2" placeholder="제목을 입력하세요." name="title" id="title2">
+					<input type=text class="form-control mb-2" placeholder="제목을 입력하세요." name="title" id="title">
 				</div>
 				<div class="col-12" style="height: 600px"><br>
-					<textarea id="summernote" name="contents"></textarea>
+					<textarea id="contents" name="contents"></textarea>
 				</div>
 				<div class="col-12 btns" align="right">
 					<button type="submit" class="btn btn-outline-secondary" id="toWrite">글 쓰기</button>
@@ -48,7 +48,7 @@
 			</div>
 		</form>
 	</div>
-	<script>
+<!-- 	<script>
 	    $('#summernote').summernote({
 	        placeholder: '내용을 입력하세요.',
 	        height: 500,
@@ -73,6 +73,6 @@
 	        	}
 	        }
 	      });
-    </script>
+    </script> -->
 </body>
 </html>
