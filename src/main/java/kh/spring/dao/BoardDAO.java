@@ -24,5 +24,4 @@ public class BoardDAO {
 				dto.getContents(),
 				dto.getView_count());
 	}
-	
 }
