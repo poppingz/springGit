@@ -35,7 +35,8 @@
 		})
 		
 		$("#delete").on("click",function(){
-			
+			$("#listFrm").attr("action","delete");
+			$("#listFrm").submit;
 		})
 		
 		$("#back").on("click",function(){

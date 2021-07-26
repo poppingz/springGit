@@ -1,24 +1,16 @@
 package kh.spring.dao;
 
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-=======
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
->>>>>>> bd52b2d73813e1a7fab3208bc250f47f819fbf77
 import org.springframework.stereotype.Repository;
 
 import kh.spring.dto.BoardDTO;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> bd52b2d73813e1a7fab3208bc250f47f819fbf77
 @Repository
 public class BoardDAO {
 	
@@ -35,11 +27,6 @@ public class BoardDAO {
 		String sql = "delete from board where board_seq = ?";
 		return jdbc.update(sql, board_seq);
 	}
-
-   @Autowired
-   private JdbcTemplate jdbc;
-
-
 
    // 새로 작성한 글에 대한 seq ----------------------------------------------------
    public int getSeq() {

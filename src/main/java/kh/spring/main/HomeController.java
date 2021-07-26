@@ -34,4 +34,10 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("delete")
+	public String delete(int board_seq) throws Exception {
+		System.out.println("삭제 요청 확인");
+		return "home";
+	}
+	
 }
