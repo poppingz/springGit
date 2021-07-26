@@ -65,21 +65,13 @@
 	width: 200px;
 	border: 1px solid #ddd;
 	margin: auto;
-	line-height: 60px;
+	line-height: 65px;
 }
 
 .menu>div:hover {
 	background-color: #ddd;
-	text-decoration: none;
-	color: black;
-}
-
-a {
-	text-decoration: none;
-	color: black;
-	display: block;
-	width: 100%;
-	height: 100%;
+	color:white;
+	cursor: pointer;
 }
 </style>
 </head>
@@ -117,15 +109,11 @@ a {
 				</div>
 				<div class="title">${loginID }님</div>
 				<div class="menu">
-					<div>
-						<a href="/board/list">게시판</a>
-					</div>
-					<div>
-						<a href="/member/logout">로그아웃</a>
-					</div>
-					<div>
-						<a href="/member/memberOut" id="memberOut">회원탈퇴</a>
-					</div>
+
+					<div id=boardBtn>게시판</div>
+					<div id=logout>로그아웃</div>
+					<div id=memberOut>회원탈퇴</div>
+
 				</div>
  
 			</div>
