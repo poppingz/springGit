@@ -31,6 +31,12 @@
 			location.href = "board/boardlist";
 		})
 
+		
+		$("#boardBtn").on("click", function() {
+			location.href = "/board/list";
+
+		})
+
 	})
 </script>
 <style>

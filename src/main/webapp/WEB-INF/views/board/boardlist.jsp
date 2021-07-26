@@ -34,7 +34,25 @@
 		text-decoration: none;
 	}
 	
+	#write{
+		margin-left:40%;
+		height: 30px;
+   		width: 100px;
+   		border: 1px solid #ddd;
+   		background-color:#FFFFD2;
+} 
+	}
+	
 </style>
+<script>
+$(function() {
+	$("#write").on("click", function() {
+		location.href = "/board/boardWrite";
+	})
+
+
+})
+</script>
 <body>
 	   <table align="center">
 	      <tr>
@@ -50,7 +68,7 @@
 		<c:forEach items="${viewAll }" var="list">
 			<tr id=contentslist>
 				<td>${list.board_seq }</td>
-				<td><a href='detail?seq=${list.board_seq }'>${list.title }</a></td>
+				<td><a href='/board/detail?board_seq=${list.board_seq }'>${list.title }</a></td>
 				<td>${list.id }
 				<td>${list.write_date}
 				<td>${list.view_count}
@@ -79,5 +97,7 @@
 			<a href="list?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
 		</c:if>
 	</div>
+	
+	<button id=write>글쓰기</button>
 </body>
 </html>
