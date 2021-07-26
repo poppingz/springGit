@@ -15,14 +15,13 @@ public class BoardDAO {
 	private JdbcTemplate jdbc;
 	
 	public int insert(BoardDTO dto) {
-		String sql = "insert into board values(?,?,?,?,?,?)";
+		String sql = "insert into board values(?,?,?,?,sysdate,?)";
 		return jdbc.update(
 				sql,
 				dto.getBoard_seq(),
 				dto.getId(),
 				dto.getTitle(),
 				dto.getContents(),
-				dto.getWrite_date(),
 				dto.getView_count());
 	}
 	

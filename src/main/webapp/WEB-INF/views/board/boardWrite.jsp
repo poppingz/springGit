@@ -35,18 +35,6 @@
 				<div class="card-header bg-transparent border-secondary text-secondary col-12">
 					<h4 class="card-title" id="title">글 쓰기</h4>
 				</div>
-				<div class="col-3">
-					<br> <select class="form-control" name="category"
-						id="srch_item" required>
-						<option value="" selected>선택하세요.</option>
-						<option value="1">카테고리1</option>
-						<option value="2">카테고리2</option>
-						<option value="3">카테고리3</option>
-					</select>
-				</div>
-				<div class="col-9"><br> 
-					<input type=text class="form-control mb-2" name="nickname" placeholder="닉네임" id="nickname" required>
-				</div>
 				<div class="col-12">
 					<input type=text class="form-control mb-2" placeholder="제목을 입력하세요." name="title" id="title2">
 				</div>
