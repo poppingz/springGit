@@ -27,8 +27,11 @@
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
-		$("#boardBtn").on("click",function(){
-			location.href="/board/list";
+
+		
+		$("#boardBtn").on("click", function() {
+			location.href = "/board/list";
+
 		})
 
 	})
