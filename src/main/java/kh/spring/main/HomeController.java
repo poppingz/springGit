@@ -1,6 +1,6 @@
 package kh.spring.main;
 
-<<<<<<< HEAD
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,20 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import kh.spring.dao.BoardDAO;
 import kh.spring.dto.BoardDTO;
 
-=======
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
->>>>>>> 191e8b4a532046a7d2a75e8d39dbae3ad7c76ee4
-
 @Controller
 public class HomeController {
 	
-<<<<<<< HEAD
 	@Autowired
 	private BoardDAO dao;
 	
-=======
->>>>>>> 191e8b4a532046a7d2a75e8d39dbae3ad7c76ee4
 	@RequestMapping("/")
 	public String home() {
 		return "home";

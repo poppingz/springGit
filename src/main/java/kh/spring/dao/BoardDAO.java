@@ -15,7 +15,7 @@ import kh.spring.vo.PagingVO;
 
 @Repository
 public class BoardDAO {
-<<<<<<< HEAD
+
 	
 	@Autowired
 	private JdbcTemplate jdbc;
@@ -30,13 +30,6 @@ public class BoardDAO {
 		String sql = "delete from board where board_seq = ?";
 		return jdbc.update(sql, board_seq);
 	}
-=======
-
-   @Autowired
-   private JdbcTemplate jdbc;
-   private BoardDAO dao;
-
->>>>>>> 191e8b4a532046a7d2a75e8d39dbae3ad7c76ee4
 
    // 새로 작성한 글에 대한 seq ----------------------------------------------------
    public int getSeq() {
