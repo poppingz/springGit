@@ -27,25 +27,14 @@
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
-<<<<<<< HEAD
-<<<<<<< HEAD
 		
 		$("#boardBtn").on("click", function(){
 			location.href = "/"
-=======
+		})
+		
 		$("#boardBtn").on("click",function(){
 			location.href="/board/list";
->>>>>>> 191e8b4a532046a7d2a75e8d39dbae3ad7c76ee4
-=======
-
-		
-		$("#boardBtn").on("click", function() {
-			location.href = "/board/list";
-
->>>>>>> 36e17202326571cea95a0ab41a5b5a1bce16d019
 		})
-
-	})
 </script>
 <style>
 .wrapper {
@@ -93,7 +82,6 @@
 </style>
 </head>
 <body>
-<a href="modifyForm">d</a>
 	<c:choose>
 		<c:when test="${loginID==null }">
 			<div class="container p-3 col-12"

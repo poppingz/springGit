@@ -40,7 +40,7 @@
 		})
 		
 		$("#back").on("click",function(){
-		
+			location.href="javascript:history.back()";
 		})
 	})
 	
@@ -48,7 +48,7 @@
 
 </head>
 <body>
-	<form action="modify" method="post" id="listFrm">
+	<form action="" method="post" id="listFrm">
 		<!-- page title -->
 	    <div id="pageTitle">
 	        <h2> 글 수정 </h2>
