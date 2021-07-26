@@ -19,7 +19,6 @@ import kh.spring.vo.PagingVO;
 @Repository
 public class BoardDAO {
 
-<<<<<<< HEAD
 	
 	@Autowired
 	private JdbcTemplate jdbc;
@@ -34,11 +33,7 @@ public class BoardDAO {
 		String sql = "delete from board where board_seq = ?";
 		return jdbc.update(sql, board_seq);
 	}
-=======
->>>>>>> dbd438b97f6108b7a3909edf87cb49028a06f040
 
-	@Autowired
-	private JdbcTemplate jdbc;
 	
 	@Autowired
 	private BoardDAO dao;
