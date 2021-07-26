@@ -1,6 +1,9 @@
 package kh.spring.main;
 
 
+import java.io.File;
+import java.util.UUID;
+
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
+
 import kh.spring.dao.BoardDAO;
 import kh.spring.dto.BoardDTO;
 import kh.spring.vo.PagingVO;
@@ -23,7 +28,6 @@ public class BoardController {
 	
 	@Autowired
 	private HttpSession session;
-
 
 	//수정화면 이동
 	@RequestMapping("modifyForm")
@@ -46,13 +50,9 @@ public class BoardController {
 		int result = dao.delete(board_seq);
 		return "home";
 	}
-	
+
 	private PagingVO vo;
-	
-	@RequestMapping("boardlist")
-	public String boardList() {
-		return "board/boardlist";
-	}
+
 	
 	@RequestMapping("boardWrite")
 	public String boardWrite() {
@@ -60,11 +60,22 @@ public class BoardController {
 	}
 	
 	@RequestMapping("writeProc")
-	public String writeProc(String title, String contents) throws Exception{
+	public String writeProc(String title, String contents,MultipartFile[] file) throws Exception{
 //		String id = (String)session.getAttribute("loginID");
+		String realPath = session.getServletContext().getRealPath("files");
+		File filesPath = new File(realPath);
+		if(!filesPath.exists()) {filesPath.mkdir();}
+		
+		for(MultipartFile tmp : file) {
+			String oriName = tmp.getOriginalFilename();
+			String sysName = UUID.randomUUID().toString().replaceAll("-", "")+"_"+oriName;
+			tmp.transferTo(new File(filesPath.getAbsolutePath()+"/"+sysName));
+		}
+		
 		dao.insert(title,contents);
 		return "redirect:/";
 	}
+
 	
 	@RequestMapping("list")
 	public String list(PagingVO vo, Model model, String nowPage, String cntPerPage) throws Exception {

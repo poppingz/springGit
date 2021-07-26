@@ -19,7 +19,6 @@ import kh.spring.vo.PagingVO;
 @Repository
 public class BoardDAO {
 
-
 	
 	@Autowired
 	private JdbcTemplate jdbc;

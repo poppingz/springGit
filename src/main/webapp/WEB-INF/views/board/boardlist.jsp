@@ -8,6 +8,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+	$(function() {
+		$("#write").on("click", function() {
+			location.href = "/board/boardWrite";
+		})
+	
+	})
+</script>
 </head>
 <style>
 	body {
@@ -20,12 +28,8 @@
 		background-color:#FFFFD2;
 		font-weight: bold;
 	}
-	#contentslist{
-		background-color:#FCFCFC;
-	}
-	a {
-		text-decoration: none;
-	}
+	#contentslist{background-color:#FCFCFC;}
+	a {text-decoration: none;}
 	
 	#write{
 		margin-left:40%;
@@ -33,18 +37,10 @@
    		width: 100px;
    		border: 1px solid #ddd;
    		background-color:#FFFFD2;
-} 
 	}
 	
 </style>
-<script>
-$(function() {
-	$("#write").on("click", function() {
-		location.href = "/board/boardWrite";
-	})
 
-})
-</script>
 <body>
 	   <table align="center">
 	      <tr>

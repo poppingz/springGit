@@ -36,6 +36,8 @@
 					<h4 class="card-title" id="title2">글 쓰기</h4>
 				</div>
 				<div class="col-12">
+					<input type="file" name="file" multiple><br>
+					<a href="/file/download?oriName= &sysName=">다운로드</a>
 					<input type=text class="form-control mb-2" placeholder="제목을 입력하세요." name="title" id="title">
 				</div>
 				<div class="col-12" style="height: 600px"><br>

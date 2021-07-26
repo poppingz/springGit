@@ -55,8 +55,7 @@
 				<div class="files">
 					<h4>Files</h4>
 					<c:forEach var="f" items="${flist}">
-						<a
-							href="${pageContext.request.contextPath}/download.file?file_seq=${f.file_seq}&oriName=${f.oriName}&sysName=${f.sysName}">${f.oriName}</a>
+						<a href="${pageContext.request.contextPath}/download.file?file_seq=${f.file_seq}&oriName=${f.oriName}&sysName=${f.sysName}">${f.oriName}</a>
 						<br>
 					</c:forEach>
 				</div>
@@ -65,7 +64,7 @@
 				<div class="contents">${list.contents}</div>
 				<div class="btn_wrap" align="right">
 					<c:choose>
-						<c:when test="${login.id eq list.id}">
+						<c:when test="${loginID eq list.id}">
 							<a
 								href="${pageContext.request.contextPath}/modifyPage.bor?board_seq=${list.board_seq}"
 								class="btn btn-warning"

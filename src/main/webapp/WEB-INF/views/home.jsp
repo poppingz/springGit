@@ -24,14 +24,17 @@
 				location.href = "/member/memberOut";
 			}
 		})
+
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
 
+
 		$("#boardBtn").on("click",function(){
-			location.href = "/board/boardlist";
+			location.href = "/board/list";
 		})
 	})
+
 </script>
 <style>
 .wrapper {
