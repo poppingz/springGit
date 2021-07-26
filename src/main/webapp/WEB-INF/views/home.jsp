@@ -27,9 +27,14 @@
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
+<<<<<<< HEAD
 		
 		$("#boardBtn").on("click", function(){
 			location.href = "/"
+=======
+		$("#boardBtn").on("click",function(){
+			location.href="/board/list";
+>>>>>>> 191e8b4a532046a7d2a75e8d39dbae3ad7c76ee4
 		})
 
 	})
@@ -113,11 +118,13 @@
 				</div>
 				<div class="title">${loginID }님</div>
 				<div class="menu">
+
 					<div id=boardBtn>게시판</div>
 					<div id=logout>로그아웃</div>
 					<div id=memberOut>회원탈퇴</div>
-				</div>
 
+				</div>
+ 
 			</div>
 		</c:otherwise>
 
