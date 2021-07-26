@@ -24,6 +24,9 @@
 				location.href = "/member/memberOut";
 			}
 		})
+		$("#boardBtn").on("click", function() {
+			location.href = "/board/list";
+		})
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
