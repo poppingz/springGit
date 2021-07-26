@@ -23,7 +23,7 @@ public class BoardController {
 	
 	@Autowired
 	private HttpSession session;
-<<<<<<< HEAD
+
 
 	//수정화면 이동
 	@RequestMapping("modifyForm")
@@ -36,18 +36,16 @@ public class BoardController {
 	@RequestMapping("modifyProc")
 	public String modify(BoardDTO dto) throws Exception {
 		System.out.println("수정 요청 확인");
-		int result = bdao.modify(dto);
+		int result = dao.modify(dto);
 		return "home";
 	}
 	
 	@RequestMapping("delete")
 	public String delete(int board_seq) throws Exception {
 		System.out.println("삭제 요청 확인");
-		int result = bdao.delete(board_seq);
+		int result = dao.delete(board_seq);
 		return "home";
 	}
-	
-=======
 	
 	private PagingVO vo;
 	
@@ -84,7 +82,7 @@ public class BoardController {
 			model.addAttribute("viewAll", dao.SelectBoard(vo));
 		return "board/boardlist";
 	}	
->>>>>>> dbd438b97f6108b7a3909edf87cb49028a06f040
+
 	@RequestMapping(value="detail" ,method=RequestMethod.GET)
 	public String detail(Model model,int board_seq) throws Exception{
 		BoardDTO dto = dao.detail(board_seq);

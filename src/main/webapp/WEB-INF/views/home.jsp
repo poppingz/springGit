@@ -27,21 +27,11 @@
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
-<<<<<<< HEAD
-=======
-		$("#boardBtn").on("click",function(){
-			location.href = "board/boardlist";
-		})
 
->>>>>>> dbd438b97f6108b7a3909edf87cb49028a06f040
-		
-		$("#boardBtn").on("click", function(){
-			location.href = "/"
-		})
-		
 		$("#boardBtn").on("click",function(){
-			location.href="/board/list";
+			location.href = "/board/boardlist";
 		})
+	})
 </script>
 <style>
 .wrapper {
