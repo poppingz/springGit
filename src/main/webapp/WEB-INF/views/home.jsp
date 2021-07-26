@@ -9,10 +9,10 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
+</head>
+<body>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
 	$(function() {
 		$("#logout").on("click", function() {
@@ -27,6 +27,13 @@
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
+<<<<<<< HEAD
+=======
+		$("#boardBtn").on("click",function(){
+			location.href = "board/boardlist";
+		})
+
+>>>>>>> dbd438b97f6108b7a3909edf87cb49028a06f040
 		
 		$("#boardBtn").on("click", function(){
 			location.href = "/"
@@ -125,6 +132,5 @@
 		</c:otherwise>
 
 	</c:choose>
-
 </body>
 </html>

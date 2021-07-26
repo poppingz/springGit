@@ -1,10 +1,13 @@
+<<<<<<< HEAD
 	package kh.spring.dao;
+=======
+
+package kh.spring.dao;
+>>>>>>> dbd438b97f6108b7a3909edf87cb49028a06f040
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
-
 import kh.spring.dto.MemberDTO;
 
 @Repository
