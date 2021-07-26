@@ -19,25 +19,33 @@
 			location.href = "/member/logout";
 		})
 		$("#memberOut").on("click", function() {
-         let result=confirm("정말 탈퇴하시겠습니까?");
-         if(result){
-            location.href = "/member/memberOut";
-         }
-      })
+			let result = confirm("정말 탈퇴하시겠습니까?");
+			if (result) {
+				location.href = "/member/memberOut";
+			}
+		})
 		$("#signup").on("click", function() {
 			location.href = "/member/signup";
 		})
-		
+
 	})
 </script>
 <style>
 .wrapper {
-	margin: 40px 120px 0px 120px;
+	margin: auto;
+	margin-top: 40px;
 	text-align: center;
 }
 
+.img {
+	margin: auto;
+	width: 200px;
+	height: 200px;
+}
+
 .img>img {
-	width: 100% height:100%
+	width: 100%;
+	height: 100%;
 }
 
 .title {
@@ -57,19 +65,13 @@
 	width: 200px;
 	border: 1px solid #ddd;
 	margin: auto;
-	line-height: 60px;
+	line-height: 65px;
 }
 
 .menu>div:hover {
 	background-color: #ddd;
-}
-
-a {
-	text-decoration: none;
-	color: black;
-	display: block;
-	width: 100%;
-	height: 100%;
+	color:white;
+	cursor: pointer;
 }
 </style>
 </head>
@@ -83,14 +85,14 @@ a {
 					<h3>로그인</h3>
 					<div class="form-group">
 						<label for="exampleInputEmail1">ID</label> <input type="text"
-							class="form-control" id="id" name="id" placeholder="아이디를 입력하세요"
+							class="form-control" id="id" name="id" placeholder="아이디를 입력해 주세요."
 							aria-describedby="emailHelp"> <small id="emailHelp"
 							class="form-text text-muted">저희는 아이디를 다른 사람과 공유하지 않습니다.</small>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label> <input
 							type="password" class="form-control" id="pw" name="pw"
-							placeholder="비밀번호를 입력하세요">
+							placeholder="비밀번호를 입력해 주세요.">
 					</div>
 
 					<button type="submit" class="btn btn-secondary"
@@ -107,17 +109,13 @@ a {
 				</div>
 				<div class="title">${loginID }님</div>
 				<div class="menu">
-					<div>
-						<a href="#">게시판</a>
-					</div>
-					<div>
-						<a href="/member/logout">로그아웃</a>
-					</div>
-					<div>
-						<a href="/member/memberOut" id="memberOut">회원탈퇴</a>
-					</div>
-				</div>
 
+					<div id=boardBtn>게시판</div>
+					<div id=logout>로그아웃</div>
+					<div id=memberOut>회원탈퇴</div>
+
+				</div>
+ 
 			</div>
 		</c:otherwise>
 
