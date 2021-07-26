@@ -109,11 +109,13 @@
 				</div>
 				<div class="title">${loginID }님</div>
 				<div class="menu">
+
 					<div id=boardBtn>게시판</div>
 					<div id=logout>로그아웃</div>
 					<div id=memberOut>회원탈퇴</div>
-				</div>
 
+				</div>
+ 
 			</div>
 		</c:otherwise>
 
