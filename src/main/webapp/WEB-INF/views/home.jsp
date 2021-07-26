@@ -28,6 +28,7 @@
 			location.href = "/member/signup";
 		})
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
 		$("#boardBtn").on("click", function(){
 			location.href = "/"
@@ -35,6 +36,13 @@
 		$("#boardBtn").on("click",function(){
 			location.href="/board/list";
 >>>>>>> 191e8b4a532046a7d2a75e8d39dbae3ad7c76ee4
+=======
+
+		
+		$("#boardBtn").on("click", function() {
+			location.href = "/board/list";
+
+>>>>>>> 36e17202326571cea95a0ab41a5b5a1bce16d019
 		})
 
 	})
